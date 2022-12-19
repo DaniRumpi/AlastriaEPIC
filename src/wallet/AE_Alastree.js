@@ -15,7 +15,7 @@ class AE_Alastree {
   findChildByData(property, propertyValue) {
     console.log('Property find ----->', property)
     console.log('Prioertie value ----->', propertyValue)
-    console.log(this)
+    console.log('this ----->', this)
     let nodes = [];
     if (this.data[property] == propertyValue) {
       nodes.push(this);
