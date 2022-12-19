@@ -144,8 +144,6 @@ async function main() {
     acme_login_challenge_signature
   );
 
-  console.log(newUserEpicWallet)
-
   AEWS.storeIdentityWallet(newUserEpicWallet, "./User_store_wallet.json");
 
   let copyUserEpicWallet = new AEUW.AE_userWallet();
