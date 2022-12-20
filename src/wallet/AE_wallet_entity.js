@@ -75,9 +75,7 @@ class AE_entityWallet extends AEW.AE_rootWallet {
   }
 
   getCPlusDerivation(entityStr) {
-    console.log('DTREE ----->', this.DTree)
     let wTree = this.DTree.findChildByData("derivationName", "C");
-    console.log('WTREE ----->', wTree)
     let fTree = wTree.filter(
       (nodo) => nodo.data.entity == entityStr && nodo.data.validStatus == true
     );
