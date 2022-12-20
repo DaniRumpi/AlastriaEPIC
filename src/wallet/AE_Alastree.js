@@ -13,15 +13,11 @@ class AE_Alastree {
   }
 
   findChildByData(property, propertyValue) {
-    console.log('Property find ----->', property)
-    console.log('Prioertie value ----->', propertyValue)
-    console.log('this ----->', this)
     let nodes = [];
     if (this.data[property] == propertyValue) {
       nodes.push(this);
     }
     for (let i = 0; i < this.descendants.length; i++) {
-      console.log('descendants del for ----->', this.descendants[i])
       let rNodes = this.descendants[i].findChildByData(property, propertyValue);
       nodes.push(...rNodes);
     }
