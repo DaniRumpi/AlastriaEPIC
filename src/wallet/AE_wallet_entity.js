@@ -169,7 +169,7 @@ class AE_entityWallet extends AEW.AE_rootWallet {
     //review derivations of Entities and Users, that are different
 
     let signerRl = this.getCPlusDerivation(signerStr);
-    let login_derivation = this.getLoginDerivation("User");
+    let login_derivation = this.getLoginDerivation(signerStr);
     return this.baseVerifyLoginChallenge(
       challengeStr,
       signatureStr,
