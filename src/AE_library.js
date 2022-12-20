@@ -130,6 +130,8 @@ function verifyMessageByPublicExtendedKey(
   relationship_public_key_wallet =
     createRO_HDWalletFromPublicExtendedKey(extendedPublicKey);
 
+    console.log('relationship_public_key_wallet ----->', relationship_public_key_wallet)
+
   // get an Ethereum wallet from the HDWallet
   relationship_public_key_wallet_login_validator = getWalletFromHDWallet(
     relationship_public_key_wallet
