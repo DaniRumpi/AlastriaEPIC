@@ -21,7 +21,7 @@ class AE_Alastree {
       nodes.push(this);
     }
     for (let i = 0; i < this.descendants.length; i++) {
-      console.log('descendants del for ----->', this.descendatns[i])
+      console.log('descendants del for ----->', this.descendatns)
       let rNodes = this.descendants[i].findChildByData(property, propertyValue);
       nodes.push(...rNodes);
     }
