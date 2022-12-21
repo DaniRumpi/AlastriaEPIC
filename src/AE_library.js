@@ -130,21 +130,16 @@ function verifyMessageByPublicExtendedKey(
   relationship_public_key_wallet =
     createRO_HDWalletFromPublicExtendedKey(extendedPublicKey);
 
-    console.log('relationship_public_key_wallet ----->', relationship_public_key_wallet)
-
   // get an Ethereum wallet from the HDWallet
   relationship_public_key_wallet_login_validator = getWalletFromHDWallet(
     relationship_public_key_wallet
   );
-  console.log('relationship_public_key_wallet_login_validator ----->', relationship_public_key_wallet_login_validator)
   // get the Address of that wallet
   relationship_public_key_wallet_login_address =
     relationship_public_key_wallet_login_validator.getAddressString();
-    console.log('relationship_public_key_wallet_login_address ----->', relationship_public_key_wallet_login_address)
 
   // In the other hand get the Address form the signature
   signed_login_address = getAdressFromSignedMessage(message, signature);
-    console.log('signedLoginAddress ----->', signed_login_address)
 
   // Compare both Addresses, use toChecksumAddress just in case any of them is not normalized
   if (
