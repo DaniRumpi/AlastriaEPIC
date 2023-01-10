@@ -252,6 +252,7 @@ class AE_userWallet extends AEW.AE_rootWallet {
   }
 
   getBPlusDerivation(entityStr, oldDerivation = "none") {
+    console.log(entityStr, oldDerivation)
     let vTree = [];
     let wTree = this.DTree.findChildByData("derivationName", "B");
     let fTree = wTree.filter((nodo) => nodo.data.entity == entityStr);
@@ -260,7 +261,7 @@ class AE_userWallet extends AEW.AE_rootWallet {
     } else {
       vTree = fTree.filter((x) => x.data.derivationValue == oldDerivation);
     }
-
+    console.log('vTree ----->', vTree[0])
     return vTree[0];
   }
 
@@ -398,6 +399,7 @@ class AE_userWallet extends AEW.AE_rootWallet {
 
     // Calculate the credential path up to level B
     let wholePath = objectDerivation[0].data.path;
+    console.log('wholePath ----->', wholePath)
     let objectDerivationStr =
       "m" +
       wholePath.substring(
@@ -410,6 +412,8 @@ class AE_userWallet extends AEW.AE_rootWallet {
 
   getObjectExtendedPublicKey(entityStr, objectID) {
     let objectDerivationStr = this.getObjectDerivation(entityStr, objectID);
+
+    console.log(1, objectDerivationStr)
 
     let credential_wallet = AEL.getHDWalletDerivation(
       this.identity_HDWallet,
