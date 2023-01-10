@@ -392,6 +392,8 @@ class AE_userWallet extends AEW.AE_rootWallet {
     let localBplus = this.getBPlusDerivation(entityStr);
     let objectDerivation = localBplus.findChildByData("objectID", objectID);
 
+    console.log('localBPlus ----->', localBplus)
+
     console.log('objectDerivation ----->', objectDerivation)
 
     // Calculate the credential path up to level B
