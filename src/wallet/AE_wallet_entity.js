@@ -212,6 +212,7 @@ class AE_entityWallet extends AEW.AE_rootWallet {
     credential_setSignatureStr
   ) {
     let localCplus = this.getCPlusDerivation(userStr);
+    console.log('LOCALCPUL del Entity ----->', localCplus);
     let user_Cplus_Wallet = AEL.createRO_HDWalletFromPublicExtendedKey(
       localCplus.data.other_extendedPublicKey
     );
