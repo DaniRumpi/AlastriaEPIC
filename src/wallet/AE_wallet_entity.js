@@ -237,7 +237,7 @@ class AE_entityWallet extends AEW.AE_rootWallet {
       user_base_identity_pubK
     );
     let cred_derived_pubK_array = [];
-    i = 0;
+    let i = 0;
     cred_der_set.forEach((element) => {
       let cred_derived_pubK = AEL.getPublicExtendedKey(
         AEL.getHDWalletDerivation(user_Cplus_Wallet, cred_der_set[i])
