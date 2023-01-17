@@ -246,9 +246,9 @@ class AE_entityWallet extends AEW.AE_rootWallet {
       i++;
     });
 
-    i = 0;
+    let j = 0;
     cred_derived_pubK_array.every((element) => {
-      if (!(element === credential_pubK_set[i])) {
+      if (!(element === credential_pubK_set[j])) {
         console.log("ERROR validating Chain Of Trust for credentials");
         result = false;
       }
