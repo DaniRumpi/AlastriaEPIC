@@ -26,19 +26,20 @@ class AE_rootWallet {
   }
 
   setIdentityDerivation(mZR_der, SSSSSW_der, MTN_der) {
-    let identityDerivationStr = mZR_der + SSSSSW_der + MTN_der;
+    // let identityDerivationStr = mZR_der + SSSSSW_der + MTN_der;
+    let identityDerivationStr = mZR_der + SSSSSW_der;
 
     //Check identityDerivsationStr
-    AEU.check_require("id_derivation", identityDerivationStr);
-    derivations = identityDerivationStr.split("/");
-    if (!(derivations.length === this.identity_pattern.length)) {
-      console.log(
-        "Identity Derivation Str has ",
-        derivations.length,
-        "depth not the required ",
-        this.identity_pattern.length
-      );
-    }
+    // AEU.check_require("id_derivation", identityDerivationStr);
+    // derivations = identityDerivationStr.split("/");
+    // if (!(derivations.length === this.identity_pattern.length)) {
+    //   console.log(
+    //     "Identity Derivation Str has ",
+    //     derivations.length,
+    //     "depth not the required ",
+    //     this.identity_pattern.length
+    //   );
+    // }
 
     // 20221024 Do not store identityDerivationStr, it is not necessary to use the wallet after the inizialization, this is more secure
     // identity_HDWallet is the only necessary working point
